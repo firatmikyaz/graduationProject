@@ -1,0 +1,36 @@
+{
+    "cart":{
+        "number":"No",
+        "image":"Picture",
+        "name":"Name",
+        "description":"Description",
+        "price":"Price",
+        "action":"Delete"
+    },
+    "detail-buttons":{
+        "next":"Next",
+        "previous":"Previous"
+    },
+    "header":{
+        "shopping":"Shopping",
+        "products":"Products",
+        "logout":"Logout"
+    },
+    "login":{
+        "email":"Email Address",
+        "password":"Password",
+        "login":"Login",
+        "register":"Register"
+    },
+    "register":{
+        "firstname":"Firstname",
+        "lastname":"Lastname",
+        "email":"Email Address",
+        "password":"Password"
+    },
+    "products-button":{
+        "add":"Add"
+    }
+
+
+}

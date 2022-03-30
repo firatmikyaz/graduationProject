@@ -1,0 +1,8 @@
+img{
+    max-width:70px;
+    height:auto;
+}
+.container{
+    height:66.5vh;
+    overflow-y: scroll;
+}
