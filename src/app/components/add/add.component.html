@@ -1,0 +1,36 @@
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="addForm"  (submit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="productname" class="form-label">Name</label>
+                    <input [formControlName]="'name'" type="text" class="form-control" id="productname">
+                 </div>
+                  <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input [formControlName]="'description'" type="text" class="form-control" id="description">
+                 </div>
+                  <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input [formControlName]="'price'" type="number" min="0" class="form-control" id="price">
+                 </div>
+                 <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select [formControlName]="'category'" class="form-select" aria-label="Default select example">
+                        <option selected>Select Category</option>
+                        <option value="Cameras">Camera</option>
+                        <option value="Computers">Computer</option>
+                        <option value="Phones">Phone</option>
+                    </select>
+                 </div>
+                   <div class="mb-3">
+                    <label for="img" class="form-label">Image</label>
+                    <input (change)="onChange($event)" [formControlName]="'img'" type="file" class="form-control" id="img">
+                 </div>
+                <button type="submit" class="btn btn-sm btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

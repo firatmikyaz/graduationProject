@@ -12,7 +12,7 @@
       <div *ngFor="let product of filterProducts | search: search" class="col-sm-4 mb-3">
         <!-- Card'a tıklandığında ürün detayına gidilecek -->
         <!-- [routerLink]="['/detailproduct', product.id]" -->
-          <div  class="card rounded-3"> 
+          <div  class="card rounded-3">
             <img [routerLink]="['/detailproduct', product.id]" src="{{product.img}}" class="card-img-top img " alt="...">
             <div class="card-body" [routerLink]="['/detailproduct', product.id]">
               <h5 class="card-title">{{product.productName}}</h5>
@@ -21,8 +21,11 @@
               <li class="list-group-item">{{product.description}}</li>
               <li class="list-group-item">{{product.price}}<i class="fa fa-usd ms-1"></i></li>
               <button class="btn btn-primary" (click)="addtocart(product)">{{"products-button.add"|transloco}}</button>
+              <button *ngIf="loginUser.authority=='1'" class="btn btn-success mt-1" [queryParams]="{remake:true}" [routerLink]="['/remake',product.id]">Edit</button>
+              <button *ngIf="loginUser.authority=='1'" class="btn btn-danger mt-1" (click)="onDelete(product.id)">Delete</button>
+
             </ul>
           </div>
-      </div>  
+      </div>
     </div>
-</div>  
+</div>

@@ -4,23 +4,31 @@ import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { TranslocoService } from '@ngneat/transloco';
 
-
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup; //reactiveform için kullanıyoruz
   errorMessage: string;
 
-  constructor(private router:Router,private dataService:UserService,private translate:TranslocoService) { }
+  constructor(
+    private router: Router,
+    private dataService: UserService,
+    private translate: TranslocoService
+  ) {}
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
-      firstName: new FormControl(null, [Validators.required, Validators.pattern('((?=.*[a-z])(?=.*[A-Z]).{3,20})')]),
-      lastName: new FormControl(null, [Validators.required, Validators.pattern('((?=.*[a-z])(?=.*[A-Z]).{3,20})')]),
+      firstName: new FormControl(null, [
+        Validators.required,
+        Validators.pattern('((?=.*[a-z])(?=.*[A-Z]).{3,20})'),
+      ]),
+      lastName: new FormControl(null, [
+        Validators.required,
+        Validators.pattern('((?=.*[a-z])(?=.*[A-Z]).{3,20})'),
+      ]),
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [
         Validators.required,
@@ -29,26 +37,26 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  onSubmit(){
-    if(this.registerForm.valid)
-    {
+  onSubmit() {
+    if (this.registerForm.valid) {
       const userInfo = {
         firstName: this.registerForm.get('firstName').value,
         lastName: this.registerForm.get('lastName').value,
         email: this.registerForm.get('email').value,
-        password: this.registerForm.get('password').value
+        password: this.registerForm.get('password').value,
+        authority: '2',
       };
 
       this.dataService.postData(userInfo).subscribe((element) => {
         console.log(element);
-        this.router.navigate(['/login'])
+        this.router.navigate(['/login']);
       });
     }
   }
-  goLogin(){
+  goLogin() {
     this.router.navigate(['/login']);
   }
-  changeLang(value:string){
+  changeLang(value: string) {
     this.translate.setActiveLang(value);
   }
 }

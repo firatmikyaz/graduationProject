@@ -9,15 +9,19 @@ import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserService } from './services/user.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './components/register/register.component';
-import { GuardService } from './services/guard.service';
+import { GuardService } from './guards/guard.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { DetailProductComponent } from './components/detail-product/detail-product.component';
 import { CartService } from './services/cart.service';
 import { SearchPipe } from './shared/search.pipe';
 import { TranslocoRootModule } from './transloco-root.module';
+import { AddComponent } from './components/add/add.component';
+import { ProductService } from './services/product.service';
+import { AdminGuard } from './guards/admin.guard';
+import { LoginInterceptor } from './login.interceptor';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,7 @@ import { TranslocoRootModule } from './transloco-root.module';
     RegisterComponent,
     DetailProductComponent,
     SearchPipe,
+    AddComponent,
   ],
   imports: [
     /**
@@ -41,13 +46,20 @@ import { TranslocoRootModule } from './transloco-root.module';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    TranslocoRootModule
+    TranslocoRootModule,
   ],
   providers: [
     GuardService,
     UserService,
-    CartService
+    CartService,
+    ProductService,
+    AdminGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoginInterceptor,
+      multi: true,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

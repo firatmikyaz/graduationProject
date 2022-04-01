@@ -3,15 +3,17 @@
     {
       "firstName": "Fırat",
       "lastName": "Mikyaz",
-      "email": "firat61@gmail.com",
-      "password": "Fırat123",
+      "email": "firat@firat.com",
+      "password": "Firat123",
+      "authority": "1",
       "id": 1
     },
     {
       "firstName": "Onur",
-      "lastName": "Utku",
-      "email": "Onur1@gmail.com",
+      "lastName": "Topaloğlu",
+      "email": "onur@onur.com",
       "password": "Onur123",
+      "authority": "2",
       "id": 2
     }
   ],
@@ -30,14 +32,6 @@
       "description": "Color Red",
       "price": "1300",
       "id": 2,
-      "category": "Computers"
-    },
-    {
-      "img": "../../../assets/images/3.jfif",
-      "productName": "Casper",
-      "description": "Color Green",
-      "price": "1500",
-      "id": 3,
       "category": "Computers"
     },
     {
