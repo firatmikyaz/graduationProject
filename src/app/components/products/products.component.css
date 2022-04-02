@@ -14,7 +14,18 @@ a:link, a:visited {
     text-decoration: none;
     display: inline-block;
   }
-  
+
   a:hover, a:active {
     background-color: darkgrey;
   }
+.list-img{
+  width: 50px;
+  height: auto;
+}
+th{
+  cursor: pointer;
+}
+.container{
+  max-height: 100vh;
+  overflow-y: scroll;
+}

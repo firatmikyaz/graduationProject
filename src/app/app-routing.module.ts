@@ -8,6 +8,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AdminGuard } from './guards/admin.guard';
 import { GuardService } from './guards/guard.service';
+import { LeaveGuard } from './guards/leave.guard';
 
 const routes: Routes = [
   {
@@ -40,11 +41,13 @@ const routes: Routes = [
     path: 'add',
     component: AddComponent,
     canActivate: [AdminGuard],
+    canDeactivate: [LeaveGuard],
   },
   {
     path: 'remake/:id',
     component: AddComponent,
     canActivate: [AdminGuard],
+    canDeactivate: [LeaveGuard],
   },
 ];
 

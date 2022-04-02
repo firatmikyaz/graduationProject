@@ -22,6 +22,7 @@ import { AddComponent } from './components/add/add.component';
 import { ProductService } from './services/product.service';
 import { AdminGuard } from './guards/admin.guard';
 import { LoginInterceptor } from './login.interceptor';
+import { LeaveGuard } from './guards/leave.guard';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { LoginInterceptor } from './login.interceptor';
     CartService,
     ProductService,
     AdminGuard,
+    LeaveGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoginInterceptor,

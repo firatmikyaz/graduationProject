@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
+  listCard: boolean = true;
   products = [];
   categories = [
     //For products categories
@@ -80,5 +81,8 @@ export class ProductsComponent implements OnInit {
       );
       this.activeCategory = category;
     }
+  }
+  toggle() {
+    this.listCard = !this.listCard;
   }
 }

@@ -149,6 +149,16 @@
       "productId": 2,
       "id": 10,
       "category": "Phones"
+    },
+    {
+      "userId": 1,
+      "img": "../../../assets/images/1.jfif",
+      "productName": "Apple",
+      "description": "Color White",
+      "price": "2000",
+      "productId": 1,
+      "categories": "Computers",
+      "id": 11
     }
   ],
   "pay": [

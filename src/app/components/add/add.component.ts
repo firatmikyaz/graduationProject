@@ -13,6 +13,7 @@ export class AddComponent implements OnInit {
   isRemake: boolean;
   product: any;
   reader: FileReader = new FileReader();
+  isLeaveSafe: boolean = false;
   constructor(
     private productService: ProductService,
     private route: ActivatedRoute,
@@ -71,11 +72,18 @@ export class AddComponent implements OnInit {
       } else {
         this.productService.updateData(newAdd, this.product.id).subscribe();
       }
-      this.router.navigate(['/products']);
     } else {
       console.log(newAdd);
 
-      this.productService.addData(newAdd).subscribe();
+      this.productService.addData(newAdd).subscribe(
+        () => {
+          this.isLeaveSafe = true;
+          this.router.navigate(['/products']);
+        },
+        (error) => {
+          this.isLeaveSafe = false;
+        }
+      );
     }
   }
 }

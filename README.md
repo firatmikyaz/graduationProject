@@ -1,5 +1,5 @@
-//Ürünler Tabloda gösterilecek
-//Admin ürün eklerken çıkmaya çalışırsa uyarı verilecek.
+
+
 
 
 Orion Innovation Angular/Frontend Bootcamp Bitirme Projesi
@@ -29,10 +29,10 @@ kullanıcı, site yöneticisi). Public kullanıcı ürünleri görüntüleyebili
 ekleyebilir ve satış işlemini gerçekleştirebilir. Site yöneticisi ise yeni ürün ekleyebilir,
 mevcut ürünlerin içeriklerini güncelleyebilir ve silebilir. Public kullanıcı ürünlerin
 yönetildiği sayfaya erişim sağlayamamalı.
- Ürünler kart listesi olarak görüntülenebildiği gibi, bir tabloda da görüntülenebilmeli
+ //Ürünler kart listesi olarak görüntülenebildiği gibi, bir tabloda da görüntülenebilmeli
 (kullanıcıya seçim yaptırılmalı)
  //Ürünler içeriklerine göre detaylı bir şekilde filtrelenebilmeli
- Site yöneticisi yeni ürün ekleme ekranında, formda herhangi bir değişiklik yaptığı
+ //Site yöneticisi yeni ürün ekleme ekranında, formda herhangi bir değişiklik yaptığı
 durumda, başka bir sayfaya route etmek isterse kaydedilmemiş değişiklikleriniz
 bulunmaktadır tarzında bir uyarı ile karşılaşmalı ve onaylarsa route işlemi yapılmalı,
 onaylamazsa aynı sayfada kalmalı
