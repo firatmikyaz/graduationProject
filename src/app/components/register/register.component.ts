@@ -23,11 +23,11 @@ export class RegisterComponent implements OnInit {
     this.registerForm = new FormGroup({
       firstName: new FormControl(null, [
         Validators.required,
-        Validators.pattern('((?=.*[a-z])(?=.*[A-Z]).{3,20})'),
+        // Validators.pattern('((?=.*[a-z])(?=.*[A-Z]).{3,20})'),
       ]),
       lastName: new FormControl(null, [
         Validators.required,
-        Validators.pattern('((?=.*[a-z])(?=.*[A-Z]).{3,20})'),
+        // Validators.pattern('((?=.*[a-z])(?=.*[A-Z]).{3,20})'),
       ]),
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [

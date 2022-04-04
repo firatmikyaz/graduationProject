@@ -37,6 +37,7 @@ export class ProductsComponent implements OnInit {
       this.initData();
     });
     this.loginUser = JSON.parse(localStorage.getItem('user'));
+    console.log(this.loginUser.authority);
 
     //this works for get data from header component search input value!
     this.productservice.search.subscribe((searchCame: string) => {

@@ -90,16 +90,16 @@
       <hr />
       <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-          <button [disabled]="registerForm.invalid" type="submit" class="btn btn-default logbutton">Register</button>
+          <button [disabled]="registerForm.invalid" type="submit" class="btn btn-default logbutton">{{"login.register"|transloco}}</button>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-          <button (click)="goLogin()" type="button" class="btn btn-default logbutton">Login</button>
+          <button (click)="goLogin()" type="button" class="btn btn-default logbutton">{{"login.login"|transloco}}</button>
         </div>
       </div>
       <select #select (click)="changeLang(select.value)" name="lang" id="lang">
         <option value="tr">TR</option>
         <option value="en">ENG</option>
-        <option value="jp">JP</option>
+        <!-- <option value="jp">JP</option> -->
       </select>
     </form>
 </div>

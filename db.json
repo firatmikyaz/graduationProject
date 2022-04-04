@@ -9,10 +9,10 @@
       "id": 1
     },
     {
-      "firstName": "Onur",
-      "lastName": "Topaloğlu",
-      "email": "onur@onur.com",
-      "password": "Onur123",
+      "firstName": "Kabak",
+      "lastName": "Kabak",
+      "email": "kabak@kabak.com",
+      "password": "Kabak123",
       "authority": "2",
       "id": 2
     }

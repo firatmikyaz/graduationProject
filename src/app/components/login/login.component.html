@@ -1,33 +1,34 @@
 <div class="container-fluid">
-    <form [formGroup]="loginForm" (submit)="onSubmit()" class="register-form"> 
-     <div class="row">      
+    <form [formGroup]="loginForm" (submit)="onSubmit()" class="register-form">
+     <div class="row">
           <div class="col-md-4 col-sm-4 col-lg-4">
              <label for="email">{{"login.email"|transloco}}</label>
               <input [formControlName]="'email'" id="email" class="form-control" type="email">
-              <span class="alert" *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched" > email düzgün girilmedi!! </span>    
-          </div>            
+              <span class="alert" *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched" > email düzgün girilmedi!! </span>
+          </div>
      </div>
      <div class="row">
           <div class="col-md-4 col-sm-4 col-lg-4">
              <label for="email">{{"login.password"|transloco}}</label>
               <input [formControlName]="'password'" class="form-control" type="password">
               <span class="alert" *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched" > Password düzgün girilmedi!! </span>
-              <span class="alert" *ngIf="errorMessage"> {{errorMessage}} </span>             
-          </div>            
+              <span class="alert" *ngIf="errorMessage"> {{errorMessage}} </span>
+          </div>
      </div>
      <hr>
      <div class="row">
          <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-          <button [disabled]="loginForm.invalid" type="submit" class="btn btn-default logbutton">{{"login.login"|transloco}}</button>           
+          <button [disabled]="loginForm.invalid" type="submit" class="btn btn-default logbutton">{{"login.login"|transloco}}</button>
          </div>
          <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-            <button (click)="goRegister()" type="button" class="btn btn-default logbutton">{{"login.register"|transloco}}</button>           
-           </div>                 
-     </div>    
-     <select #select (click)="changeLang(select.value)" name="lang" id="lang">
+            <button (click)="goRegister()" type="button" class="btn btn-default logbutton">{{"login.register"|transloco}}</button>
+           </div>
+     </div>
+     <!-- Select choose language tr and eng -->
+     <select class="mt-1 border border-dark rounded" #select (click)="changeLang(select.value)" name="lang" id="lang">
         <option value="tr">TR</option>
         <option value="en">ENG</option>
-        <option value="jp">JP</option>
+        <!-- <option value="jp">JP</option> -->
       </select>
    </form>
 </div>
