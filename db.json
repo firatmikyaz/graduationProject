@@ -163,18 +163,19 @@
   ],
   "pay": [
     {
-      "firstName": "Onur",
-      "lastName": "Utku",
-      "email": "Onur1@gmail.com",
-      "password": "Onur123",
-      "id": 2
-    },
-    {
       "firstName": "Fırat",
       "lastName": "Mikyaz",
       "email": "firat61@gmail.com",
       "password": "Fırat123",
       "id": 1
+    },
+    {
+      "authority": "2",
+      "email": "kabak@kabak.com",
+      "firstName": "Kabak",
+      "id": 2,
+      "lastName": "Kabak",
+      "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     }
   ]
 }

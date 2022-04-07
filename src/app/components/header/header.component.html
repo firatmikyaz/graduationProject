@@ -1,4 +1,3 @@
-
 <div *ngIf="login">
   <header>
     <div class="navbar navbar-dark bg-dark shadow-sm">
@@ -9,7 +8,6 @@
         <div class="form-group">
           <input [(ngModel)]="search" (keyup)="onKeyUp()" type="text" class="form-control w-100" placeholder="search products">
       </div>
-
         <div class="me-2">
           <button [routerLink]="['/products']" class="btn btn-primary btn-sm me-3">{{"header.products"|transloco}}</button>
           <button [routerLink]="['/cart']" class="btn btn-primary btn-sm me-3"><i class="fa fa-shopping-cart fs-3"></i></button>
@@ -17,7 +15,6 @@
           <select #select (click)="changeLang(select.value)" name="lang" id="lang">
             <option value="tr">TR</option>
             <option value="en">ENG</option>
-            <option value="jp">JP</option>
           </select>
           <button (click)="onLogout()" class="btn btn-primary btn-sm me-4 me-3">{{"header.logout"|transloco}}</button>
         </div>

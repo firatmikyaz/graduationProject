@@ -18,17 +18,16 @@
      <hr>
      <div class="row">
          <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-          <button [disabled]="loginForm.invalid" type="submit" class="btn btn-default logbutton">{{"login.login"|transloco}}</button>
+            <button [disabled]="loginForm.invalid" type="submit" class="btn btn-default logbutton">{{"login.login"|transloco}}</button>
          </div>
          <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
             <button (click)="goRegister()" type="button" class="btn btn-default logbutton">{{"login.register"|transloco}}</button>
-           </div>
+         </div>
      </div>
      <!-- Select choose language tr and eng -->
      <select class="mt-1 border border-dark rounded" #select (click)="changeLang(select.value)" name="lang" id="lang">
         <option value="tr">TR</option>
         <option value="en">ENG</option>
-        <!-- <option value="jp">JP</option> -->
       </select>
    </form>
 </div>

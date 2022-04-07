@@ -1,35 +1,36 @@
 {
-    "cart":{
-        "number":"No",
-        "image":"Resim",
-        "name":"Adı",
-        "description":"Açıklaması",
-        "price":"Fiyatı",
-        "action":"Sil"
-    },
-    "detail-buttons":{
-        "next":"Sonraki",
-        "previous":"Önceki"
-    },
-    "header":{
-        "shopping":"Alışveriş",
-        "products":"Ürünler",
-        "logout":"Çıkış"
-    },
-    "login":{
-        "email":"Email Adresi",
-        "password":"Şifre",
-        "login":"Giriş",
-        "register":"Kayıt"
-    },
-    "register":{
-        "firstname":"Adı",
-        "lastname":"Soyadı",
-        "email":"Email Adresi",
-        "password":"Şifre"
-    },
-    "products-button":{
-        "add":"Ekle"
-    }
-
+  "cart": {
+    "number": "No",
+    "image": "Resim",
+    "name": "Adı",
+    "description": "Açıklaması",
+    "price": "Fiyatı",
+    "action": "Sil"
+  },
+  "detail-buttons": {
+    "next": "Sonraki",
+    "previous": "Önceki"
+  },
+  "header": {
+    "shopping": "Alışveriş",
+    "products": "Ürünler",
+    "logout": "Çıkış"
+  },
+  "login": {
+    "email": "Email Adresi",
+    "password": "Şifre",
+    "login": "Giriş",
+    "register": "Kayıt"
+  },
+  "register": {
+    "firstname": "Adı",
+    "lastname": "Soyadı",
+    "email": "Email Adresi",
+    "password": "Şifre"
+  },
+  "products-button": {
+    "add": "Ekle",
+    "edit": "Düzenle",
+    "delete": "Sil"
+  }
 }

@@ -23,9 +23,8 @@
               <li class="list-group-item">{{product.description}}</li>
               <li class="list-group-item">{{product.price}}<i class="fa fa-usd ms-1"></i></li>
               <button class="btn btn-primary" (click)="addtocart(product)">{{"products-button.add"|transloco}}</button>
-              <button *ngIf="loginUser.authority=='1'" class="btn btn-success mt-1" [queryParams]="{remake:true}" [routerLink]="['/remake',product.id]">Edit</button>
-              <button *ngIf="loginUser.authority=='1'" class="btn btn-danger mt-1" (click)="onDelete(product.id)">Delete</button>
-
+              <button *ngIf="loginUser.authority=='1'" class="btn btn-success mt-1" [queryParams]="{remake:true}" [routerLink]="['/remake',product.id]">{{"products-button.edit"|transloco}}</button>
+              <button *ngIf="loginUser.authority=='1'" class="btn btn-danger mt-1" (click)="onDelete(product.id)">{{"products-button.delete"|transloco}}</button>
             </ul>
           </div>
       </div>
@@ -45,18 +44,16 @@
   </thead>
   <tbody>
     <tr *ngFor="let product of filterProducts | search: search">
-
       <th [routerLink]="['/detailproduct', product.id]" scope="row"><img class="list-img" [src]="product.img" alt="img"></th>
       <td>{{product.productName}}</td>
       <td>{{product.description}}</td>
       <td>{{product.price}}</td>
       <td>{{product.category}}</td>
       <div class="d-flex justify-content-center align-items-center">
-          <button class="btn btn-primary bg-primary btn-sm me-1" (click)="addtocart(product)">{{"products-button.add"|transloco}}</button>
-              <button *ngIf="loginUser.authority=='1'" class="btn btn-success bg-success me-1  btn-sm" [queryParams]="{remake:true}" [routerLink]="['/remake',product.id]">Edit</button>
-              <button *ngIf="loginUser.authority=='1'" class="btn btn-danger bg-danger btn-sm" (click)="onDelete(product.id)">Delete</button>
+        <button class="btn btn-primary bg-primary btn-sm me-1" (click)="addtocart(product)">{{"products-button.add"|transloco}}</button>
+        <button *ngIf="loginUser.authority=='1'" class="btn btn-success bg-success me-1  btn-sm" [queryParams]="{remake:true}" [routerLink]="['/remake',product.id]">{{"products-button.edit"|transloco}}</button>
+        <button *ngIf="loginUser.authority=='1'" class="btn btn-danger bg-danger btn-sm" (click)="onDelete(product.id)">{{"products-button.delete"|transloco}}</button>
       </div>
-
     </tr>
   </tbody>
 </table>
