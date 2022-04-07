@@ -31,15 +31,18 @@ export class HeaderComponent implements OnInit {
       }
     }
   }
+  //for user logout method
   onLogout() {
     localStorage.removeItem('user');
     this.router.navigate(['/login']);
     this.login = false;
     this.dataService.login.next(false);
   }
+  //For search input method, product bring search words
   onKeyUp() {
     this.productService.search.next(this.search);
   }
+  //for user choose language (tr,eng)
   changeLang(value: string) {
     this.translate.setActiveLang(value);
   }

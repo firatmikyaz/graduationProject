@@ -21,14 +21,8 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
-      firstName: new FormControl(null, [
-        Validators.required,
-        // Validators.pattern('((?=.*[a-z])(?=.*[A-Z]).{3,20})'),
-      ]),
-      lastName: new FormControl(null, [
-        Validators.required,
-        // Validators.pattern('((?=.*[a-z])(?=.*[A-Z]).{3,20})'),
-      ]),
+      firstName: new FormControl(null, [Validators.required]),
+      lastName: new FormControl(null, [Validators.required]),
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [
         Validators.required,
@@ -37,6 +31,7 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  //bring the form input data, save dbjson
   onSubmit() {
     if (this.registerForm.valid) {
       const userInfo = {
@@ -53,9 +48,11 @@ export class RegisterComponent implements OnInit {
       });
     }
   }
+  //user go login page
   goLogin() {
     this.router.navigate(['/login']);
   }
+  //user change language
   changeLang(value: string) {
     this.translate.setActiveLang(value);
   }

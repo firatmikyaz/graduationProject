@@ -21,7 +21,7 @@ export class ProductsComponent implements OnInit {
   ];
   filterProducts: any;
   activeCategory: String = this.categories[0];
-  loginUser;
+  loginUser: any;
   cartItemList: any = [];
   search: string;
   constructor(
@@ -50,15 +50,18 @@ export class ProductsComponent implements OnInit {
       this.filterProducts = this.products; // All products
     });
   }
+  //user go productdetail
   onChange() {
     this.router.navigate(['/productdetail']);
   }
-  onDelete(id) {
+  //User delete product
+  onDelete(id: Number) {
     this.productservice.deleteData(id).subscribe(() => {
       this.productservice.isDeleted.next(true);
     });
   }
 
+  //user add product to cart
   addtocart(item: any) {
     const newCartWithUser = {
       userId: this.loginUser.id,
@@ -72,6 +75,7 @@ export class ProductsComponent implements OnInit {
     this.cartService.addtoCart(newCartWithUser).subscribe();
   }
 
+  //user choose category
   onSelectCategory(category: String) {
     if (category == 'All Products') {
       this.filterProducts = this.products;
