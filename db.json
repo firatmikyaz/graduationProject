@@ -113,22 +113,6 @@
       "price": "1000",
       "id": 13,
       "category": "Cameras"
-    },
-    {
-      "img": "../../../assets/images/14.jfif",
-      "productName": "Canon Y6",
-      "description": "Color Black2",
-      "price": "870",
-      "id": 14,
-      "category": "Cameras"
-    },
-    {
-      "img": "../../../assets/images/15.jfif",
-      "productName": "Nikon A1",
-      "description": "Color Black",
-      "price": "550",
-      "id": 15,
-      "category": "Cameras"
     }
   ],
   "cart": [
@@ -151,14 +135,24 @@
       "category": "Phones"
     },
     {
-      "userId": 1,
-      "img": "../../../assets/images/1.jfif",
-      "productName": "Apple",
-      "description": "Color White",
-      "price": "2000",
-      "productId": 1,
+      "userId": 2,
+      "img": "../../../assets/images/5.jfif",
+      "productName": "Dell",
+      "description": "Color Orange",
+      "price": "1300",
+      "productId": 5,
       "categories": "Computers",
       "id": 11
+    },
+    {
+      "userId": 2,
+      "img": "../../../assets/images/8.jfif",
+      "productName": "Samsung",
+      "description": "Color Blue",
+      "price": "800",
+      "productId": 8,
+      "categories": "Phones",
+      "id": 12
     }
   ],
   "pay": [
