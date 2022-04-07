@@ -107,6 +107,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+
+<h2 align="center">Requirements</h2>
 Orion Innovation Angular/Frontend Bootcamp Bitirme Projesi
  
  //Ürün satışının, kullanıcı kaydının ve girişinin yapıldığı, yeni ürünlerin eklenip,
