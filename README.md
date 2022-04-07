@@ -76,7 +76,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - [Linkedin](https://tr.linkedin.com/in/firatmikyaz) - firat.mikyaz.tr@gmail.com
 
-Project Link: [https://github.com/164-orion-innovation-turkey-bootcamp/hafta4-odev-assignment-firatmikyaz](https://github.com/164-orion-innovation-turkey-bootcamp/hafta4-odev-assignment-firatmikyaz)
+Project Link:  https://github.com/firatmikyaz/graduationProject.git
 
 
 # Shopping
